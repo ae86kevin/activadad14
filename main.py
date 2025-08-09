@@ -11,3 +11,18 @@ for i in range(cantidad):
     participantes[numeroDorsal]["edad"]=int(input("Ingrese el edad: "))
     participantes[numeroDorsal]["categoria"]=input("Ingrese el categoria: ")
 
+
+def quick_sorter(lista):
+    if len(lista) <= 1:
+        return lista
+
+    pivote = lista[0]
+    menores =[x for x in lista[1:] if x[1]["edad"] <= pivote[1]["edad"]]
+    mayores= [x for x in lista[1:] if x[1]["edad"] > pivote[1]["edad"]]
+
+    return quick_sorter(menores) + [pivote] + quick_sorter(mayores)
+
+lista_participantes =list(participantes.items())
+
+
+
