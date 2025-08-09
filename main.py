@@ -1,6 +1,5 @@
 participantes ={}
 
-print("Menu principal")
 cantidad=int(input("Ingrese la cantidad de participantes: "))
 for i in range(cantidad):
     print(f"\nIngrese los datos de participante: {i+1}")
@@ -23,6 +22,23 @@ def quick_sorter(lista):
     return quick_sorter(menores) + [pivote] + quick_sorter(mayores)
 
 lista_participantes =list(participantes.items())
+
+
+
+
+
+print("Menu principal")
+
+seleccion =""
+while seleccion != "0":
+    print("\n1.Agregar participante")
+    print("2.MOstrar particiapantes por edad")
+    print("3.mostarr particiapantes por nombre")
+    print("0. salir")
+    seleccion=int(input())
+
+
+
 
 
 
