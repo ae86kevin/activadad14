@@ -21,7 +21,7 @@ def quick_sorterN(lista):
     return quic_sorter(menor) + [pivot] + quic_sorter(mayor)
 
 seleccion = ""
-while seleccion != "0":
+while seleccion != 0:
     print("\n1.Agregar participante")
     print("2.MOstrar particiapantes por edad")
     print("3.mostarr particiapantes por nombre")
@@ -53,11 +53,12 @@ while seleccion != "0":
 
 
 
-        case "3":
+        case 3:
             print("Participantes ordenados por edad")
-            print("")
+            lista_participantes=list(participantes.items())
+            participantes_ordenados = quic_sorter(lista_participantes)
+            for dorsal,info in participantes_ordenados:
+                print(f"dorsal: {dorsal}, Nombre: {info['nombre']} , Edad: {info['edad']}, Categoris: {info['categoria']}")
 
-
-
-
-
+        case 0:
+            print("saliendo")
