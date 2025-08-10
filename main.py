@@ -48,6 +48,7 @@ while seleccion != "0":
 
         case "3":
             print("Participantes ordenados por edad")
+            print("")
 
 
 
